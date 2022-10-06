@@ -1,0 +1,61 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --background: rgb(164, 232, 218);
+    --navHeight: 100px;
+    --buttonBackground: aliceblue;
+    --buttonBorder: darkgrey;
+}
+
+@keyframes morph {
+    0%   { background-color: var(--buttonBackground) }
+    40%  { background-color: var(--buttonBackground) }
+    50%  { background-color: var(--background); }
+    60%  { background-color: var(--buttonBackground); }
+    100% { background-color: var(--buttonBackground); }
+  }
+
+#navbar {
+    background: var(--background);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: var(--navHeight);
+
+    display: flex;
+    padding-left: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#mainMenuButton {
+    max-height: 80%;
+    border: 1px solid var(--buttonBorder);
+    border-radius: 5px;
+    animation: morph 10s infinite;
+}
+
+.sidebar{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: var(--background);
+    transition: left 0.4s ease;
+}
+.sidebar.show{
+    left: 0px;
+}
+
+#sideNavTitle {
+    height: var(--navHeight);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
