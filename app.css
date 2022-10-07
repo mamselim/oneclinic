@@ -7,7 +7,7 @@
 
 :root {
     --background: rgb(164, 232, 218);
-    --navHeight: 100px;
+    --navHeight: 70px;
     --buttonBackground: aliceblue;
     --buttonBorder: darkgrey;
 }
@@ -43,6 +43,7 @@
 
 .sidebar{
     position: fixed;
+    top: 0px;
     width: 100%;
     height: 100%;
     left: -100%;
@@ -58,4 +59,49 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+
+#closeSideNav {
+    width: 20px;
+    height: 20px;
+}
+
+#mainMessage {
+    margin-top: var(--navHeight);
+    padding: 20px;
+    text-align: center;
+    font-size: medium;
+    font-family: cursive;
+    color: cadetblue;
+}
+
+#carousel {
+    position: relative;
+}
+
+.carImg {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.carCard {
+    padding-top: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#carWedding {
+    z-index: -3;
+}
+
+#carCareer {
+    z-index: -4;
+}
+
+#carFriends {
+    z-index: -5;
 }
