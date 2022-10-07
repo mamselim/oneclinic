@@ -22,6 +22,10 @@
 //     });
 // }
 
+function slideImage {
+
+}
+
 function main () {
     slo = new SLC();
     
@@ -31,6 +35,8 @@ function main () {
     slo.closeSideNav.addEventListener('click', function() {
         slo.sideNav.classList.toggle("show")
     });
+
+    setInterval(slideImage, 1000) 
 }
 
 class SLC {
@@ -38,5 +44,8 @@ class SLC {
         this.mainMenuButton = document.getElementById("mainMenuButton")
         this.sideNav = document.getElementById("sideNav")
         this.closeSideNav = document.getElementById("closeSideNav")
+        this.carWedding = document.getElementById("carWedding")
+        this.carCareer = document.getElementById("carCareer")
+        this.carFriends = document.getElementById("carFriends")
     }
 }
