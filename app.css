@@ -73,15 +73,18 @@
     font-size: medium;
     font-family: cursive;
     color: cadetblue;
+    color: darkslategrey;
 }
 
 #carousel {
     position: relative;
+    /* height: 100%; */
 }
 
 .carImg {
     border-radius: 20px;
     max-width: 100%;
+    /* width : 100%; */
 }
 
 .carCard {
@@ -92,6 +95,11 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    opacity: 0 ;
+    /* height: 100%; */
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
 }
 
 #carWedding {
@@ -104,4 +112,17 @@
 
 #carFriends {
     z-index: -5;
+}
+
+.carImg {
+    z-index: inherit;
+}
+
+.carTxt {
+    z-index: inherit;
+    background: var(--background);
+    color: darkslategrey;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
 }
