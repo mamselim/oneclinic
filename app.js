@@ -49,13 +49,17 @@ function main () {
     let localCars = Array.from(slo.cars)
     let carHeight = localCars[0].getBoundingClientRect().height
     slo.car.style.height = carHeight + "px"
-    console.log(carHeight)
     
     localCars.forEach((ele, ind) => {
         ele.__order = ind
         if (ind == 0) {
             ele.style.opacity = 1
         }
+    });
+
+    window.addEventListener('resize', function() {
+        let carHeight_1 = localCars[0].getBoundingClientRect().height
+        slo.car.style.height = carHeight_1 + "px"
     });
 
     setInterval(function () {
