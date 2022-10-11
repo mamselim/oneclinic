@@ -10,6 +10,7 @@
     --navHeight: 70px;
     --buttonBackground: aliceblue;
     --buttonBorder: darkgrey;
+    --fontColor: darkslategrey;
 }
 
 @keyframes morph {
@@ -32,6 +33,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    z-index: 999;
+    opacity: 80%;
 }
 
 #mainMenuButton {
@@ -73,7 +76,7 @@
     font-size: medium;
     font-family: cursive;
     color: cadetblue;
-    color: darkslategrey;
+    color: var(--fontColor);
 }
 
 #carousel {
@@ -102,7 +105,7 @@
     transition-timing-function: ease-in-out;
 }
 
-#carWedding {
+/* #carWedding {
     z-index: -3;
 }
 
@@ -112,17 +115,60 @@
 
 #carFriends {
     z-index: -5;
-}
+} */
 
-.carImg {
+/* .carImg {
     z-index: inherit;
-}
+} */
 
 .carTxt {
-    z-index: inherit;
+    /* z-index: inherit; */
     background: var(--background);
-    color: darkslategrey;
+    color: var(--fontColor);
     text-align: center;
     padding: 10px;
     border-radius: 15px;
+}
+
+.homeBubble {
+    display: block;
+    margin: 25px;
+    border-radius: 20px;
+    border: solid 2px var(--buttonBorder);
+    padding: 10px;
+    /* background-color: var(--background); */
+}
+
+.homeBubbleHeadline {
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+    color: var(--fontColor);
+}
+
+.homeBubbleHeader {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--background);
+}
+
+.homeBubbleIcon {
+    width: 30%;
+    padding: 10px;
+}
+
+.homeBubbleTxt {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--fontColor);
+}
+
+.homeBubbleButton {
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    background: var(--background);
+    border-radius: 20px;
 }

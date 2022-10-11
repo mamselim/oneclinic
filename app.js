@@ -25,11 +25,9 @@
 function slideImage (localCars) {
     
     localCars.forEach((ele) => {
-        // console.log(ele.style)
-        console.log(ele.style.zIndex)
-        ele.style.zIndex = ele.style.zIndex - 1
-        if (ele.style.zIndex < -5) {
-            ele.style.zIndex = -3
+        ele.__order = ele.__order + 1
+        if (ele.__order > 2) {
+            ele.__order = 0
             ele.style.opacity = 1
         } else {
             ele.style.opacity = 0
@@ -49,9 +47,12 @@ function main () {
     });
     
     let localCars = Array.from(slo.cars)
+    let carHeight = localCars[0].getBoundingClientRect().height
+    slo.car.style.height = carHeight + "px"
+    console.log(carHeight)
     
     localCars.forEach((ele, ind) => {
-        ele.style.zIndex = -1*ind -3
+        ele.__order = ind
         if (ind == 0) {
             ele.style.opacity = 1
         }
@@ -66,6 +67,7 @@ class SLC {
     constructor () {
         this.mainMenuButton = document.getElementById("mainMenuButton")
         this.sideNav = document.getElementById("sideNav")
+        this.car = document.getElementById("carousel")
         this.closeSideNav = document.getElementById("closeSideNav")
         this.carWedding = document.getElementById("carWedding")
         this.carCareer = document.getElementById("carCareer")
