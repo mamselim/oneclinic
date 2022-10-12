@@ -42,9 +42,10 @@ function main () {
     slo.mainMenuButton.addEventListener('click', function() {
         slo.sideNav.classList.toggle("show")
     });
-    slo.closeSideNav.addEventListener('click', function() {
-        slo.sideNav.classList.toggle("show")
-    });
+    
+    // slo.closeSideNav.addEventListener('click', function() {
+    //     slo.sideNav.classList.toggle("show")
+    // });
     
     let localCars = Array.from(slo.cars)
     let carHeight = localCars[0].getBoundingClientRect().height
